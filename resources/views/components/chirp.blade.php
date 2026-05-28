@@ -21,7 +21,7 @@
                 </div>
             @endif
 
-        <div class="min-w-0">
+        <div class="min-w-0 flex-1">
             <div class="flex justify-between w-full">
                 <div class="flex items-center gap-1">
                     <span class="text-sm font-semibold">{{ $chirp->user ? $chirp->user->name : 'Anonymous' }}</span>
@@ -32,8 +32,6 @@
                         <span class="text-sm text-base-content/60 italic">edited</span>
                     @endif
                 </div>
-                
-            </div>
 
                 <div class="flex gap-1">
                     <a href="/chirps/{{ $chirp->id }}/edit" class="btn btn-ghost btn-xs">
@@ -49,10 +47,11 @@
                     </form>
                 </div>
             </div>
-                <p class="mt-1">
-                    {{ $chirp->message }}
-                </p>
-            </div>
+
+            <p class="mt-1">
+                {{ $chirp->message }}
+            </p>
         </div>
     </div>
+  </div>
 </div>
